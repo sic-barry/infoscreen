@@ -7,7 +7,7 @@ echo "Update to latest infoscreen client"
 has_updates="false"
 
 git fetch
-git status --branch --porcelain -uno | find "[behind" && has_updates="true"
+git status --branch --porcelain -uno | grep "behind" && has_updates="true"
 
 if [[ ${has_updates}=="true" ]]; then
   echo "Updates in git repo, pull changes and restart infoscreen"
