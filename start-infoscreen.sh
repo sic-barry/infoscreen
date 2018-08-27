@@ -11,6 +11,6 @@ echo "Starting Chromium"
 client_jar=`find . -name sic-info-screen-2.0-client-*.jar | sort --numeric-sort --reverse | head -n 1`
 
 echo "Staring infoscreen client: $client_jar"
-source settings.env
+source ./settings.env
 java -Dclient.mail.server=${SERVER} -Dsic.client.mail.user=${USER} -Dsic.client.mail.password=${PW} -jar $client_jar \
 > info-screen-2.0-client.log 2>&1 &
