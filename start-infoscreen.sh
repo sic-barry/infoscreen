@@ -10,5 +10,5 @@ echo "Starting Chromium"
 
 echo "Staring infoscreen client: $client_jar"
 source ./settings.env
-java -Dclient.mail.server=${SERVER} -Dsic.client.mail.user=${USER} -Dsic.client.mail.password=${PW} -Dsic.client.mail.content.passphrase=${PASSPHRASE} -jar sic-info-screen-2.0-client.jar \
+java -Dclient.mail.pop3.server=${SERVER} -Dclient.mail.pop3.port=995 -Dsic.client.mail.user=${USER} -Dsic.client.mail.password=${PW} -Dsic.client.mail.content.passphrase=${PASSPHRASE} -jar sic-info-screen-2.0-client.jar \
 > info-screen-2.0-client.log 2>&1 &
